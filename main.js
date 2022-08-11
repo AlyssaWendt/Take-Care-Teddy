@@ -25,7 +25,7 @@ let modal = document.querySelector('.modal')
 
 
 function startGame() {
-    modal.classList.add('.modal_contents')
+    modal.classList.add('.modal-contents')
     let interval = setInterval(decreaseHealth, 1000);
     let lap = setTimeout(gamePlay, 10000);
     
@@ -34,11 +34,11 @@ function startGame() {
 
 function gamePlay(){
     if(snackHealth.value == 0 || goldHealth.value == 0 || cuddleHealth.value == 0){
-        document.querySelector('modal_contents').textContent = "Oops! I guess Teddy was a bit of a handful. That's alright!"
-        modal.classList.add('.modal_contents'); 
+        document.querySelector('modal-contents').textContent = "Oops! I guess Teddy was a bit of a handful. That's alright!"
+        modal.classList.add('.modal-contents'); 
     }else{
-        document.querySelector('modal_contents').textContent = "I'm back! Thanks so much for watching Teddy."
-        modal.classList.add('.modal_contents')
+        document.querySelector('modal-contents').textContent = "I'm back! Thanks so much for watching Teddy."
+        modal.classList.add('.modal-contents')
 
     }
     window.location.reload();
@@ -72,7 +72,7 @@ function decreaseHealth(){
 
 //EVENTLISTENERS 
 
-start.addEventListener('click', startGame)
+start.addEventListener("click", startGame)
 cuddle.addEventListener("click", increaseCuddleHealth)
 gold.addEventListener("click", increaseGoldHealth)
 snack.addEventListener("click", increaseSnackHealth)
