@@ -34,7 +34,7 @@
           </div>
         <div id = "setting" class = "setting_button">
             <div class="startBNT">
-            <button  type="button" class="btn btn-warning btn-lg" id="start " id=" show-modal">Start</button>
+            <button  type="button" class="btn btn-warning btn-lg" id="start " data-toggle="modal" data-target="#myModal">Start</button>
                 </div>
             <div class ="resetBNT">
             <form>
@@ -50,24 +50,18 @@
         </div>
 
        
-        <div class="modal modal--hidden">
-            <div class="modal_contents">
-                <p>Hello, I'm Newt Scamander! I have to go on a  mission and need someone to watch Teddy for me. Make sure he's fed, cuddled and given lots of gold to play with. Be back soon!</p>
-                <button type= "button" class = "btn btn-warning btn-sm" id = "close">Close</button>
+        <div class="modal" id = "myModal" role = "dialog">
+            <div class="modal-dialog">
+                <div class="modal_contents">
+                    <p>Hello, I'm Newt Scamander! I have to go on a  mission and need someone to watch Teddy for me. Make sure he's fed, cuddled and given lots of gold to play with. Be back soon!</p>
+                    <button type= "button" class = "btn btn-warning btn-sm" data-dismiss="modal" id = "close">Close</button>
+                </div>
             </div>
-
         </div>
         
 
 
         </div>
-        
-
-
-
-
-
-
 
 
     </div>

@@ -10,29 +10,22 @@ const cuddle = document.querySelector("#cuddle");
 const start = document.querySelector("#start");
 /// reset button
 const reset = document.querySelector("#reset");
+// close button
+const closed = document.querySelector('#close')
 
 //Healthbars
 let snackHealth = document.querySelector("#snack-health")
 let goldHealth = document.querySelector("#gold-health")
 let cuddleHealth = document.querySelector("#cuddle-health")
 
-function toggleModal(){
-    document.querySelector(".modal")
-    .classList.toggle(".modal--hidden")
-}
- document.querySelector("#show-modal")
-start.addEventListener('click', toggleModal);
+let modal = document.querySelector('.modal')
 
-document.querySelector('#start')
-.addEventListener('.close', (event) =>{
-    event.preventDefault();
-    toggleModal();
-})
 
 //FUNCTIONS
 
+
 function startGame() {
-    
+    modal.classList.add('.modal_contents')
     let interval = setInterval(decreaseHealth, 1000);
     let lap = setTimeout(gamePlay, 10000);
     
@@ -41,9 +34,11 @@ function startGame() {
 
 function gamePlay(){
     if(snackHealth.value == 0 || goldHealth.value == 0 || cuddleHealth.value == 0){
-        alert("Ops! Looks like Teddy was a bit of a handful. It's alright you did your best"); 
+        document.querySelector('modal_contents').textContent = "Oops! I guess Teddy was a bit of a handful. That's alright!"
+        modal.classList.add('.modal_contents'); 
     }else{
-        alert("I'm back! Thanks so much for taking care of Teddy for me.")
+        document.querySelector('modal_contents').textContent = "I'm back! Thanks so much for watching Teddy."
+        modal.classList.add('.modal_contents')
 
     }
     window.location.reload();
@@ -82,6 +77,10 @@ cuddle.addEventListener("click", increaseCuddleHealth)
 gold.addEventListener("click", increaseGoldHealth)
 snack.addEventListener("click", increaseSnackHealth)
 start.addEventListener("click", decreaseHealth )
+closed.addEventListener('click', function(){
+    modal.classList.remove(".modal")
+})
+
 
 
 //POSSIBLE FEATURES

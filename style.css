@@ -89,6 +89,7 @@ progress{
 }
 .modal {
     background-color: rgba(0, 0, 0, 0.6);
+    width: 360px;
     position: absolute;
     top: 0;
     height: 100%;
@@ -98,18 +99,23 @@ progress{
     font-family: wizard-world;
     font-size: medium;
     align-items: center;
-    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
     
   }
+ 
 .modal_contents{
     border: 5px soild black;
     background-color: rgb(249, 232, 191);
-    border-radius: 15px 50px 30px 5px;
+    border-radius: 15px 15px 15px 15px;
     padding: 2rem 4rem;
+    visibility: active;
+    opacity: 1;
   }
-.modal--hidden{
-    display: none;
-}
+
+
+
 .btn btn-warning btn-sm{
     align-items: center;
     justify-content: center;
