@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'wizard-world'; /*a name to be used later*/
+    src: url('images/wizard-world-font/WizardWorldSimplified-Kxr7.ttf'); /*URL to font*/
+}
+
+body{
+    background-image: url(images/Wallpaper.jpg);
+    padding: 50px;
+    margin:0 auto;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: wizard-world;
+    padding: 10px;
+   
+    
+}
+.main-container{
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr ;
+    align-items: center;
+    justify-items: center;
+    
+    
+
+}
+img {
+   width: 300px;
+   height: auto;
+
+   
+ 
+}
+.Teddy{
+    width: 300px;
+    height: auto;
+
+}
+
+.progress{
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
+    font-family: wizard-world;
+    font-size: 30px;
+    font-weight: bolder;
+    background: transparent;
+}
+.health-button{
+    justify-items: space-evently;
+}
+
+.setting-button{
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+    
+}
+
+progress{
+   accent-color: goldenrod;
+
+
+}
+
+
+
+.startBNT{
+    float: left;
+    padding: 10px;
+}
+.resetBNT{
+    float: right;
+    padding: 10px;
+}
+
+.btn-warning, .btn-primary:hover{
+    background-color: goldenrod;
+    border: black;
+    font-family: wizard-world;
+    color: black;
+    
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: wizard-world;
+    font-size: medium;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+.modal_contents{
+    border: 5px soild black;
+    background-color: rgb(249, 232, 191);
+    border-radius: 15px 50px 30px 5px;
+    padding: 2rem 4rem;
+  }
+.modal--hidden{
+    display: none;
+}
+.btn btn-warning btn-sm{
+    align-items: center;
+    justify-content: center;
+  }
