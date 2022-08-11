@@ -18,30 +18,33 @@ let snackHealth = document.querySelector("#snack-health")
 let goldHealth = document.querySelector("#gold-health")
 let cuddleHealth = document.querySelector("#cuddle-health")
 
-let modal = document.querySelector('.modal')
+let modal = document.querySelector('#myModal')
+let interval;
+let lap;
 
-
-//FUNCTIONS
+let gameAlert = document.querySelector("p")
 
 
 function startGame() {
-    modal.classList.add('.modal-contents')
-    let interval = setInterval(decreaseHealth, 1000);
-    let lap = setTimeout(gamePlay, 10000);
+    gameAlert.innerText = "Keep clicking to make Teddy Happy!";
+    gameAlert.append
+
+    interval = setInterval(decreaseHealth, 1000);
+    lap = setTimeout(gamePlay, 10000);
     
-  
 }
+
 
 function gamePlay(){
     if(snackHealth.value == 0 || goldHealth.value == 0 || cuddleHealth.value == 0){
-        document.querySelector('modal-contents').textContent = "Oops! I guess Teddy was a bit of a handful. That's alright!"
-        modal.classList.add('.modal-contents'); 
+        gameAlert.innerText = "Oop! I guess Teddy was a bit of a handful. That's okay";
+        gameAlert.append;
+        
     }else{
-        document.querySelector('modal-contents').textContent = "I'm back! Thanks so much for watching Teddy."
-        modal.classList.add('.modal-contents')
+        gameAlert.innerText = "I'm back! Thank you for watching Teddy for me!"
+        gameAlert.append
 
     }
-    window.location.reload();
     clearInterval(interval);
     clearTimeout(lap);
 }
@@ -60,10 +63,10 @@ function increaseSnackHealth(){
 }
 
 function decreaseHealth(){
-
-    snackHealth.value -=10;
-    goldHealth.value -=10;
-    cuddleHealth.value -=10;
+    
+    snackHealth.value -=7;
+    goldHealth.value -=7;
+    cuddleHealth.value -=7;
     
 }
 
@@ -76,10 +79,11 @@ start.addEventListener("click", startGame)
 cuddle.addEventListener("click", increaseCuddleHealth)
 gold.addEventListener("click", increaseGoldHealth)
 snack.addEventListener("click", increaseSnackHealth)
-start.addEventListener("click", decreaseHealth )
-closed.addEventListener('click', function(){
-    modal.classList.remove(".modal")
+start.addEventListener("click", decreaseHealth)
+reset.addEventListener("click", function(){
+    window.location.reload()
 })
+
 
 
 
@@ -88,6 +92,6 @@ closed.addEventListener('click', function(){
 // music playing in the background during the game
 
 
-// Get the modal
+
 
 

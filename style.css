@@ -7,6 +7,7 @@ body{
     background-image: url(images/Wallpaper.jpg);
     padding: 50px;
     margin:0 auto;
+    
 }
 h1 {
     display: flex;
@@ -17,6 +18,17 @@ h1 {
    
     
 }
+p {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-family: wizard-world;
+    background-color: rgb(249, 241, 211);
+    text-align: center;
+    border-radius: 15px 15px 15px 15px;
+  }
 .main-container{
     display: flex;
     display: grid;
@@ -87,36 +99,5 @@ progress{
     color: black;
     
 }
-.modal {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 360px;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: wizard-world;
-    font-size: medium;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
-    
-  }
  
-.modal_contents{
-    border: 5px soild black;
-    background-color: rgb(249, 232, 191);
-    border-radius: 15px 15px 15px 15px;
-    padding: 2rem 4rem;
-    visibility: active;
-    opacity: 1;
-  }
-
-
-
-.btn btn-warning btn-sm{
-    align-items: center;
-    justify-content: center;
-  }
+ 
