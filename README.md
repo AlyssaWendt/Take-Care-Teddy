@@ -11,6 +11,8 @@
 Javacript, HTML, CSS and bootstrap
 
  ☐ **Getting Started**: In this section include the link to your deployed game and any instructions you deem important.
+
+https://alyssawendt.github.io/Take-Care-Teddy/
     
  ☐ **Next Steps**: Planned future enhancements (icebox items).
  
