@@ -18,13 +18,16 @@ let snackHealth = document.querySelector("#snack-health")
 let goldHealth = document.querySelector("#gold-health")
 let cuddleHealth = document.querySelector("#cuddle-health")
 
-let modal = document.querySelector('#myModal')
+//Textbox
+let gameAlert = document.querySelector("p")
+
+//Timers
 let interval;
 let lap;
 
-let gameAlert = document.querySelector("p")
 
 
+//The Game
 function startGame() {
     gameAlert.innerText = "Keep clicking to make Teddy Happy!";
     gameAlert.append
@@ -64,9 +67,9 @@ function increaseSnackHealth(){
 
 function decreaseHealth(){
     
-    snackHealth.value -=7;
-    goldHealth.value -=7;
-    cuddleHealth.value -=7;
+    snackHealth.value -=8;
+    goldHealth.value -=8;
+    cuddleHealth.value -=8;
     
 }
 
