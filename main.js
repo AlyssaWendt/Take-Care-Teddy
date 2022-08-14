@@ -67,9 +67,9 @@ function increaseSnackHealth(){
 
 function decreaseHealth(){
     
-    snackHealth.value -= 10;
-    goldHealth.value -= 10;
-    cuddleHealth.value -= 10;
+    snackHealth.value -= 12;
+    goldHealth.value -= 12;
+    cuddleHealth.value -= 12;
     
 }
 

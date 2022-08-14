@@ -4,7 +4,7 @@
  ☐ **< Take Care Teddy >**: This is a Fantastic Beast/Harry Potter themed tamagotchi game. While Newt Scamander is away and it's the players job to keep Teddy (the niffler) happy and alive! This game's target audiance iselementary age children. Enjoy!
     
  ☐ **Screenshot(s):** Images of your actual game.
- /Screen Shot 2022-08-11 at 9.58.17 PM.png
+![alt text](images/Screen Shot 2022-08-11 at 9.58.17 PM.png "Description goes here")
  check in the images folder under same name
     
 ☐ **Technologies Used**: 
